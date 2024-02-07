@@ -47,7 +47,7 @@ function App() {
               <img
                 src={`/card/${number}${suit}.png`}
                 alt={`${number}${suit}`}
-                width={80}
+                width={100}
               ></img>
             </div>
           )
@@ -71,7 +71,12 @@ function App() {
             key={n.value}
             onClick={() => handleCard(n.value, suit)}
             style={{ margin: '0 10px' }}
-            hidden={suit === 0}
+            hidden={
+              !!(
+                suit === 0 ||
+                cards.find((c) => c.number === n.value && c.suit === suit)
+              )
+            }
           >
             {n.long}
           </button>
@@ -83,7 +88,7 @@ function App() {
         <img
           src={`/card/${predictCard}.png`}
           alt="predict card"
-          width={150}
+          width={180}
         ></img>
       </div>
 
