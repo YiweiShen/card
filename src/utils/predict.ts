@@ -26,12 +26,12 @@ export const predict = (cards: Card[]) => {
   }
 
   const diffNumber = combinations[originalIndices]
-
-  const predictNumber = numbers.find(
-    (n) => n.value === cards[0].number + diffNumber
+  const predictNumber = cards[0].number + diffNumber
+  const adjustPredictNumber = numbers.find(
+    (n) => n.value === (predictNumber > 14 ? predictNumber - 13 : predictNumber)
   )?.short
 
-  return `${predictNumber}${predictSuit}`
+  return `${adjustPredictNumber}${predictSuit}`
 }
 
 export default predict
