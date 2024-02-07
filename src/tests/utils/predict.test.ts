@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { predict } from './predict'
+import { predict } from '../../utils/predict'
 
 const mockCards = [
   { suit: 1, number: 1 },
