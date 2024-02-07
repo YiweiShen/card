@@ -42,7 +42,7 @@ function App() {
           return (
             <div key={`${number}${suit}${index}`} style={{ margin: '0 10px' }}>
               <img
-                src={`/${number}${suit}.png`}
+                src={`/card/${number}${suit}.png`}
                 alt={`${number}${suit}`}
                 width={100}
                 height={130}
@@ -78,7 +78,7 @@ function App() {
 
       {/* Show predicted card */}
       <div hidden={cards.length < CARD_NUMBER}>
-        <img src={`/${predictCard}.png`} alt="predict card"></img>
+        <img src={`/card/${predictCard}.png`} alt="predict card"></img>
       </div>
 
       {/* Reset and Predict buttons */}
