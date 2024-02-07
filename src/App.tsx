@@ -35,7 +35,10 @@ function App() {
   return (
     <div className="App">
       {/* Show selected cards */}
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+
+      <div
+        style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}
+      >
         {cards.map((card, index) => {
           const number = numbers.find((n) => n.value === card.number)?.short
           const suit = suits.find((s) => s.value === card.suit)?.short
@@ -44,8 +47,7 @@ function App() {
               <img
                 src={`/card/${number}${suit}.png`}
                 alt={`${number}${suit}`}
-                width={100}
-                height={130}
+                width={80}
               ></img>
             </div>
           )
@@ -78,7 +80,11 @@ function App() {
 
       {/* Show predicted card */}
       <div hidden={cards.length < CARD_NUMBER}>
-        <img src={`/card/${predictCard}.png`} alt="predict card"></img>
+        <img
+          src={`/card/${predictCard}.png`}
+          alt="predict card"
+          width={150}
+        ></img>
       </div>
 
       {/* Reset and Predict buttons */}
