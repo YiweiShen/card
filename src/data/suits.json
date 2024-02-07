@@ -1,0 +1,22 @@
+[
+  {
+    "long": "Spades",
+    "short": "S",
+    "value": 4
+  },
+  {
+    "long": "Hearts",
+    "short": "H",
+    "value": 3
+  },
+  {
+    "long": "Clubs",
+    "short": "C",
+    "value": 2
+  },
+  {
+    "long": "Diamonds",
+    "short": "D",
+    "value": 1
+  }
+]
