@@ -1,16 +1,16 @@
 [
   {
-    "long": "Spades",
+    "long": " Spades ",
     "short": "S",
     "value": 4
   },
   {
-    "long": "Hearts",
+    "long": " Hearts ",
     "short": "H",
     "value": 3
   },
   {
-    "long": "Clubs",
+    "long": " Clubs  ",
     "short": "C",
     "value": 2
   },
